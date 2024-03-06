@@ -1,7 +1,7 @@
 console.log("=========================ex2=========================")
-var num1 = 12
-var num2 = 33
-var num3 = 105
+var num1 = Number(prompt("Enter the first number"))
+var num2 = Number(prompt("Enter the second number"))
+var num3 = Number(prompt("Enter the third number"))
 
 if (num2 > num1) {
     if (num3 > num2) {
