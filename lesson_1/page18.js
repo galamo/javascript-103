@@ -1,4 +1,5 @@
 // ex 1;
+console.log("=========================ex1=========================")
 var n1 = 20;
 var n2 = 30;
 
@@ -6,7 +7,7 @@ if (n2 > n1) {
     console.log("Growing......")
 }
 
-// ex 1;
+
 var n3 = 20;
 var n4 = 30;
 
@@ -30,3 +31,12 @@ if (n5 > n6) {
 }
 
 
+
+// ex 3
+console.log("=========================ex3=========================")
+var someNumber = 43
+if (someNumber % 2 === 0) {
+    console.log("Even!!!")
+} else {
+    console.log("Odd")
+}
