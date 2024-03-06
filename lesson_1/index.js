@@ -21,3 +21,17 @@ var ahadot = num % 10;
 var newNum = (ahadot * 10) + asarot
 console.log(newNum)
 
+// page 15 ex 5
+
+var n = 1234
+var rightDigit = 1234 % 10
+console.log(rightDigit)
+
+
+
+// page 15 ex 6
+
+var n6 = 1234
+var n6Short = parseInt(n6 / 10)
+var rightDigit6 = n6Short % 10
+console.log(rightDigit6)
