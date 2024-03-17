@@ -19,3 +19,7 @@ ex 2 , ex 3, Bonus: ex 5
 - page 36, ex15
 - page 37, ex17, ex18
 - page 48, ex1
+
+
+# Class 17.3
+1. Write a function that recieve a string and check if the string length is longer than 20 characters, return "too long string", otherwise return the last character. 
