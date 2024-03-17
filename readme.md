@@ -22,4 +22,5 @@ ex 2 , ex 3, Bonus: ex 5
 
 
 # Class 17.3
-1. Write a function that recieve a string and check if the string length is longer than 20 characters, return "too long string", otherwise return the last character. 
+1. Write a function that receive a string and check if the string length is longer than 20 characters, return "too long string", otherwise return the last character. 
+2. Write a function that receive from the user 10 cars and print only the first and the last car
