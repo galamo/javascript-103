@@ -25,3 +25,10 @@ ex 2 , ex 3, Bonus: ex 5
 1. Write a function that receive a string and check if the string length is longer than 20 characters, return "too long string", otherwise return the last character. 
 2. Write a function that receive from the user 10 cars and print only the first and the last car
 3. create a function that push products into cart, 10 products & print the cart
+4. create a function that push products into cart & delete a selected product from prompt.
+
+
+# Homework 17.3
+- page 44,45 Only read.
+- page 48 , ex1,ex2,ex3
+- watch JS records lessons 
