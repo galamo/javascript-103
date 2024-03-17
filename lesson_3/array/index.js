@@ -13,3 +13,7 @@ for (let j = 0; j < 3; j++) {
 for (let index = 0; index < products.length; index++) {
     console.log(products[index])
 }
+
+function returnMoreThanOne() {
+    return [1 ,2]
+}
