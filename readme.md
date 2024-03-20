@@ -36,3 +36,12 @@ ex 2 , ex 3, Bonus: ex 5
 
 - page 37, ex18 - upload answer
 - Michal upload answer
+
+# Homework 20.3 
+- page 57 ex6 
+- page 57 ex7 - check only amount of strings or numbers or other.
+```javascript
+var input = [true, true, 1,2,3,4,"s","a","!", "dkjhfd", ()=>{} , "aaaaa", 9375, {} ,[], {} ]
+```
+- page 57 ex8
+- https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array
