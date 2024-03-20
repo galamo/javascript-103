@@ -32,3 +32,7 @@ ex 2 , ex 3, Bonus: ex 5
 - page 44,45 Only read.
 - page 48 , ex1,ex2,ex3
 - watch JS records lessons 
+
+
+- page 37, ex18 - upload answer
+- Michal upload answer

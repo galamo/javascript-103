@@ -8,6 +8,7 @@ function insertProducts(numOfProducts) {
     return cart;
 }
 
+
 function deleteFromCart(cart, productToDelete) {
     var foundIndex = -1;
     for (let index = 0; index < cart.length; index++) {
@@ -18,7 +19,6 @@ function deleteFromCart(cart, productToDelete) {
     if (foundIndex > -1) {
         cart.splice(foundIndex, 1)
     }
-
 }
 
 var cart = insertProducts(5)
