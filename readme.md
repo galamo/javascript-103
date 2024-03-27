@@ -53,10 +53,12 @@ example: input : 10
 output : [ { ...Miles_per_Gallon: 11 } ,{ ...Miles_per_Gallon: 15 } ]
 
 
+## Homework
+
 - Create a function that receive a book title and return a single book the first one.
 - Create a function that receive a book author and return a single book the first one.
 
-## Homework
+
 - each movie object has movieName:string, movieRating:number
 - for example
 ```javascript
