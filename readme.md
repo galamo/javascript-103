@@ -57,4 +57,11 @@ output : [ { ...Miles_per_Gallon: 11 } ,{ ...Miles_per_Gallon: 15 } ]
 - Create a function that receive a book author and return a single book the first one.
 
 ## Homework
-- 
+- each movie object has movieName:string, movieRating:number
+- for example
+```javascript
+var singleMovie = {movieName:"armagedon" , rating: 5}
+```
+- write a function that input from user ( using prmopt ) 3 movies and push them to array.
+- write a function that input from user rating number and return all the movies that higher than this rating
+- write a function that delete a movie by movieName
