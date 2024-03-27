@@ -45,3 +45,9 @@ var input = [true, true, 1,2,3,4,"s","a","!", "dkjhfd", ()=>{} , "aaaaa", 9375, 
 ```
 - page 57 ex8
 - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array
+
+
+# 
+- Create a function that receive a milesPerGalon number and return all the cars that are more economical than this milesPerGalon.
+example: input : 10
+output : [ { ...Miles_per_Gallon: 11 } ,{ ...Miles_per_Gallon: 15 } ]
