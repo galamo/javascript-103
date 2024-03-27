@@ -65,3 +65,11 @@ var singleMovie = {movieName:"armagedon" , rating: 5}
 - write a function that input from user ( using prmopt ) 3 movies and push them to array.
 - write a function that input from user rating number and return all the movies that higher than this rating
 - write a function that delete a movie by movieName
+
+
+- Go over MDN
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter
+
+- map
+- find
+- findIndex
