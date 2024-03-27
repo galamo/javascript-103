@@ -4472,7 +4472,7 @@ var carsArr = [
         "Origin": "USA"
     }
 ]
-console.log(carsArr)
+// console.log(carsArr)
 var allCarsInObject = {}
 var carsWithLP = carsArr.map((currentCar) => {
     var id = Math.ceil(Math.random() * 999999).toString();
@@ -4486,8 +4486,8 @@ for (let index = 0; index < carsArr.length; index++) {
         carsWIth4Cylinders.push(currentCar)
     }
 }
-console.log(carsWithLP)
-console.log(allCarsInObject)
+// console.log(carsWithLP)
+// console.log(allCarsInObject)
 function getCarByLP(lp) {
     for (let index = 0; index < carsWithLP.length; index++) {
         console.log("running...")
@@ -4499,6 +4499,36 @@ function getCarByLP(lp) {
     }
 }
 
-console.log(carsWIth4Cylinders)
 
 
+function getEconomicalCars(milesPerGallon) {
+    var result = []
+    for (let index = 0; index < carsArr.length; index++) {
+        var car = carsArr[index];
+        if (car.Miles_per_Gallon > milesPerGallon) {
+            result.push(car)
+        }
+    }
+    return result;
+}
+var fnResult = getEconomicalCars(41)
+
+function getCarsByKey(num, objKey) {
+    var result = []
+    for (let index = 0; index < carsArr.length; index++) {
+        var car = carsArr[index];
+        if (car[objKey] > num) {
+            result.push(car)
+        }
+    }
+    return result;
+}
+
+console.log(getCarsByKey(3500, "Weight_in_lbs"))
+
+//         "Miles_per_Gallon": 18,
+//         "Cylinders": 8,
+//         "Displacement": 307,
+//         "Horsepower": 130,
+//         "Weight_in_lbs": 3504,
+//         "Acceleration": 12,
