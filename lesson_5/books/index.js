@@ -1027,3 +1027,7 @@ function regularFn(a) { return a + 1 }
 var regularFnArrow = (a) => a + 1
 
 console.log(getBooksByCountryNG2("United Kingdom"))
+
+var someFunction = () => {
+    return 1;
+}
