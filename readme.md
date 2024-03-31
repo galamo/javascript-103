@@ -79,3 +79,6 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects
 
 # Ex 31.3
 - Edit number of pages - write a function that recieve a book title & number pf pages and adding the new number of pages to the book. 
+
+# Ex 31.3 
+- Add a new element h4 with green background  and insert into the new element (h4) the book author

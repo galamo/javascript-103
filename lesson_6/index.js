@@ -62,3 +62,14 @@ function deleteMovieByName(name, moviesArray) { // "This is Movie NAME"
         moviesArray.splice(indexToDelete, 1)
     }
 }
+
+function editBookByTitle(title, year, booksArray) {
+    if (typeof title !== 'string') return;
+    if (isNaN(Number(year))) return;
+    if (!Array.isArray(booksArray)) return;
+
+    var singleBook = books.find(function (currentBook) { return currentBook.title.toLowerCase() === title.toLowerCase() })
+    if (singleBook) {
+        singleBook.year = year
+    }
+}
