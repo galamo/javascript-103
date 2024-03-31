@@ -75,3 +75,7 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects
 - map
 - find
 - findIndex
+
+
+# Ex 31.3
+- Edit number of pages - write a function that recieve a book title & number pf pages and adding the new number of pages to the book. 
