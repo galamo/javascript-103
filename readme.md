@@ -82,3 +82,15 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects
 
 # Ex 31.3 
 - Add a new element h4 with green background  and insert into the new element (h4) the book author
+
+# Homework 31.3 
+- complete the Book card by adding all the rest of paramters into the card.
+        example: 
+        
+        "country": "Nigeria",
+        "imageLink": "images/things-fall-apart.jpg",
+        "language": "English",
+        "link": "https://en.wikipedia.org/wiki/Things_Fall_Apart",
+        "pages": 209,
+       
+        "year": 1958
