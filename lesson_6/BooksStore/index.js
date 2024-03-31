@@ -15,14 +15,29 @@ function init() {
     for (let index = 0; index < books.length; index++) {
         const currentBook = books[index];
         const bookContainerDiv = document.createElement("div") // create the single book container
-
+        bookContainerDiv.id = `book_${index}`
+        bookContainerDiv.className = "book-card"
         const bookTitleH3 = document.createElement("h3") // create header for title
         bookTitleH3.innerText = currentBook.title // insert the title from the Data into UI 
 
         const bookTitleH4 = document.createElement("h4") // create header for title
         bookTitleH4.innerText = currentBook.author
         bookTitleH4.style.background = "green"
-        bookContainerDiv.append(bookTitleH3, bookTitleH4) // append title (h3) into single book container
+
+        const button = document.createElement("button");
+        button.innerText = "Select"
+        button.addEventListener("click", function () {
+            bookContainerDiv.style.background = "yellow"
+        })
+
+        const buttonDelete = document.createElement("button");
+        buttonDelete.innerText = "🗑️"
+
+        buttonDelete.addEventListener("click", function () {
+            bookContainerDiv.remove()
+        })
+
+        bookContainerDiv.append(bookTitleH3, bookTitleH4, button, buttonDelete) // append title (h3) into single book container
 
         booksListDiv.append(bookContainerDiv) // append single book container into books list container
     }
