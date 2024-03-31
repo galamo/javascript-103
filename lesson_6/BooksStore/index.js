@@ -19,7 +19,10 @@ function init() {
         const bookTitleH3 = document.createElement("h3") // create header for title
         bookTitleH3.innerText = currentBook.title // insert the title from the Data into UI 
 
-        bookContainerDiv.append(bookTitleH3) // append title (h3) into single book container
+        const bookTitleH4 = document.createElement("h4") // create header for title
+        bookTitleH4.innerText = currentBook.author
+        bookTitleH4.style.background = "green"
+        bookContainerDiv.append(bookTitleH3, bookTitleH4) // append title (h3) into single book container
 
         booksListDiv.append(bookContainerDiv) // append single book container into books list container
     }
