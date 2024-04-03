@@ -94,3 +94,8 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects
         "pages": 209,
        
         "year": 1958
+
+
+# EX 3.4
+- Support Select Or UnSelect in the select row button, if the row not selected the text should be: "Select" if the row already
+selected the text should be: "Unselect"
