@@ -1,6 +1,8 @@
 function init() {
-
+    let selectedBooks = 0;
     const booksListDiv = document.getElementById("booksList") // create the books list container
+    const selectedBooksContainer = document.getElementById("selectedBooksNumber")
+    selectedBooksContainer.innerText = selectedBooks;
     booksListDiv.style.border = "1px solid black"
     booksListDiv.style.background = "pink"
     booksListDiv.style.textAlign = "center"
@@ -27,7 +29,14 @@ function init() {
         const button = document.createElement("button");
         button.innerText = "Select"
         button.addEventListener("click", function () {
-            bookContainerDiv.style.background = "yellow"
+            if (bookContainerDiv.style.backgroundColor === "yellow") {
+                bookContainerDiv.style.background = "pink"
+                selectedBooks--
+            } else {
+                bookContainerDiv.style.background = "red"
+                selectedBooks++;
+            }
+            selectedBooksContainer.innerText = selectedBooks
         })
 
         const buttonDelete = document.createElement("button");
