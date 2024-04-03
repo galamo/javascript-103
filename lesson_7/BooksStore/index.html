@@ -27,7 +27,20 @@
         <span id="selectedBooksNumber"> </span>
     </div>
     <div id="actions">
-        <button class="btn btn-danger" onclick="clearBooks()">Clear</button>
+
+        <div style="display: flex; justify-content: center;">
+            <h2 id="totalResult"></h2>
+        </div>
+        <div class="display-flex">
+
+            <button class="btn btn-danger" onclick="clearBooks()">Delete All Books</button>
+            <button class="btn btn-success" onclick="search()">Search</button>
+            <input id="searchInput" type="text" class="form-control" onclick="  search()" placeholder="Search a book"
+                aria-describedby="basic-addon1">
+            <!-- <input id="searchInput" type="text" class="form-control" onkeyup="search()" placeholder="Search a book"
+                aria-describedby="basic-addon1"> -->
+        </div>
+
     </div>
 
     <div id="booksList">

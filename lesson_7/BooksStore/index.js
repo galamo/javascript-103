@@ -6,6 +6,13 @@ function init() {
     booksListDiv.style.textAlign = "center"
     draw(books)
 }
+function search() {
+    const input = document.getElementById("searchInput") //[input = ELEMENT INPUT FROM DOM]
+    const searchValue = input.value
+    const newBooksArray = books.filter(book => book.title.toLowerCase().includes(searchValue.toLowerCase()))
+    draw(newBooksArray)
+
+}
 function clearBooks() {
     //  reminder make it work
     // const htmlCollectionBooks = document.getElementById("booksList").children
@@ -16,13 +23,18 @@ function clearBooks() {
     document.getElementById("booksList").innerHTML = "";
 }
 function draw(booksData) {
-    // improve!
     clearBooks()
-    for (let index = 0; index < booksData.length; index++) {
-        const currentBookUI = getSingleBookUI(booksData[index])
-        document.getElementById("booksList").append(currentBookUI)
-    }
+    const uiBooks = booksData.map(book => getSingleBookUI(book))
+    document.getElementById("booksList").append(...uiBooks)
+    // for (let index = 0; index < booksData.length; index++) {
+    //     const currentBookUI = getSingleBookUI(booksData[index])
+    //     document.getElementById("booksList").append(currentBookUI)
+    // }
     updateSelectedBooks(booksData.filter(book => book.isSelected === true))
+    updateTotalResult(booksData.length)
+}
+function updateTotalResult(lengthOfBooks) {
+    document.getElementById("totalResult").innerHTML = `${lengthOfBooks}/${books.length}`
 }
 function updateSelectedBooks(arrayOfSelectedBooks) {
     const selectedBooksContainer = document.getElementById("selectedBooksNumber")
@@ -34,11 +46,6 @@ function getSingleBookUI(bookData) {
     const id = `${bookData.title.toLowerCase().replaceAll(" ", "-")}`
     bookContainerDiv.id = id;
     bookContainerDiv.className = "book-card"
-    if (bookData.isSelected === true) {
-        bookContainerDiv.style.background = "yellow"
-    } else {
-        bookContainerDiv.style.background = "pink"
-    }
     const bookTitleH3 = document.createElement("h3") // create header for title
     bookTitleH3.innerText = bookData.title // insert the title from the Data into UI 
 
@@ -47,8 +54,14 @@ function getSingleBookUI(bookData) {
     bookTitleH4.style.background = "green"
 
     const button = document.createElement("button");
-    button.innerText = "Select"
     button.classList.add("btn", "btn-primary")
+    if (bookData.isSelected === true) {
+        button.innerText = "UnSelect"
+        bookContainerDiv.style.background = "yellow"
+    } else {
+        button.innerText = "Select"
+        bookContainerDiv.style.background = "pink"
+    }
     button.addEventListener("click", function () {
         if (bookData.isSelected === true) {
             bookData.isSelected = false;
@@ -77,6 +90,7 @@ function getSingleBookUI(bookData) {
     bookContainerDiv.append(bookTitleH3, bookTitleH4, yearBadge, button, buttonDelete)
     return bookContainerDiv
 }
+
 // {
 //     "author": "Chinua Achebe",
 //     "country": "Nigeria",
