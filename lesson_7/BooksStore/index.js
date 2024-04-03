@@ -1,3 +1,4 @@
+let inputSearchValueGlobal = ""
 
 function init() {
     const booksListDiv = document.getElementById("booksList") // create the books list container
@@ -9,8 +10,14 @@ function init() {
 function search() {
     const input = document.getElementById("searchInput") //[input = ELEMENT INPUT FROM DOM]
     const searchValue = input.value
+    inputSearchValueGlobal = input.value
     const newBooksArray = books.filter(book => book.title.toLowerCase().includes(searchValue.toLowerCase()))
     draw(newBooksArray)
+
+}
+function resetResult() {
+    document.getElementById("searchInput").value = ""
+    draw(books)
 
 }
 function clearBooks() {
@@ -22,14 +29,11 @@ function clearBooks() {
     // }
     document.getElementById("booksList").innerHTML = "";
 }
-function draw(booksData) {
+function draw(bd) {
     clearBooks()
+    const booksData = bd.filter(book => book.title.toLowerCase().includes(inputSearchValueGlobal.toLowerCase()))
     const uiBooks = booksData.map(book => getSingleBookUI(book))
     document.getElementById("booksList").append(...uiBooks)
-    // for (let index = 0; index < booksData.length; index++) {
-    //     const currentBookUI = getSingleBookUI(booksData[index])
-    //     document.getElementById("booksList").append(currentBookUI)
-    // }
     updateSelectedBooks(booksData.filter(book => book.isSelected === true))
     updateTotalResult(booksData.length)
 }
@@ -90,6 +94,13 @@ function getSingleBookUI(bookData) {
     bookContainerDiv.append(bookTitleH3, bookTitleH4, yearBadge, button, buttonDelete)
     return bookContainerDiv
 }
+
+
+
+// delete books 
+// reset - use search
+// use global params
+// flags
 
 // {
 //     "author": "Chinua Achebe",
