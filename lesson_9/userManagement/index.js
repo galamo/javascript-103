@@ -13,6 +13,7 @@ function init() {
         const ageInput = document.getElementById("age");
         const imgInput = document.getElementById("img")
         const genderInput = document.getElementById("gender")
+        const isSingleInput = document.getElementById("isSingle")
 
         const user = {
             name: { first: firstNameInput.value, last: lastNameInput.value },
@@ -21,7 +22,8 @@ function init() {
             dob: { age: ageInput.value },
             login: { username: `${firstNameInput.value}${Math.ceil(Math.random() * 9999)}` },
             picture: { large: imgInput.value },
-            gender: genderInput.value
+            gender: genderInput.value,
+            isSingle: isSingleInput.checked // next lesson.
         }
 
         users.push(user)
