@@ -50,7 +50,30 @@
                     <input type="number" class="form-control" id="age" aria-describedby="age" placeholder="age">
                 </div>
 
+                <div class="form-group col-md-3">
+                    <label for="img">Image</label>
+                    <select class="form-control" id="img">
+                        <option value="https://live.staticflickr.com/33/36479538_6e60b450b1.jpg">Nice Man</option>
+                        <option
+                            value="https://m.media-amazon.com/images/M/MV5BMTU4MzYzMzc4N15BMl5BanBnXkFtZTgwMTg3ODA3MzI@._V1_.jpg">
+                            Nice Woman</option>
+                        <option
+                            value="https://ariamedtour.com/wp-content/uploads/2022/10/male-vs-female-facial-features-differences-1.jpg">
+                            Other</option>
+                    </select>
+                </div>
 
+
+                <div class="form-group col-md-3">
+                    <label for="gender">Gender</label>
+                    <select class="form-control" id="gender">
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                        <option value="We">We</option>
+                        <option value="It">It</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
             </form>
             <div>
                 <button id="addNewUser" type="button" class="btn btn-primary">Create user</button>
@@ -66,6 +89,7 @@
                         <th scope="col">Email</th>
                         <th scope="col">Phone</th>
                         <th scope="col">Age</th>
+                        <th scope="col">Gender</th>
                         <th scope="col">Image</th>
                     </tr>
                 </thead>

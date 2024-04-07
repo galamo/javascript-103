@@ -11,13 +11,17 @@ function init() {
         const emailInput = document.getElementById("email");
         const phoneInput = document.getElementById("phone");
         const ageInput = document.getElementById("age");
+        const imgInput = document.getElementById("img")
+        const genderInput = document.getElementById("gender")
 
         const user = {
             name: { first: firstNameInput.value, last: lastNameInput.value },
             email: emailInput.value,
             phone: phoneInput.value,
             dob: { age: ageInput.value },
-            login: { username: `${firstNameInput.value}${Math.ceil(Math.random() * 9999)}` }
+            login: { username: `${firstNameInput.value}${Math.ceil(Math.random() * 9999)}` },
+            picture: { large: imgInput.value },
+            gender: genderInput.value
         }
 
         users.push(user)
@@ -26,6 +30,7 @@ function init() {
 }
 
 function draw(arrayOfUsers, tableBody) {
+    tableBody.innerHTML = ""
     for (let index = 0; index < arrayOfUsers.length; index++) {
         tableBody.append(getUserRowUI(arrayOfUsers[index]))
         // table  <=     // row       // data
@@ -55,6 +60,9 @@ function getUserRowUI(user) {
     const tdAge = document.createElement("td")
     tdAge.innerText = user?.dob?.age
 
+    const tdGender = document.createElement("td")
+    tdGender.innerText = user?.gender
+
     const tdImage = document.createElement("td")
     const imgUser = document.createElement("img")
     imgUser.classList.add("user-image")
@@ -62,7 +70,7 @@ function getUserRowUI(user) {
     tdImage.append(imgUser)
 
     const trUser = document.createElement("tr")
-    trUser.append(tdId, tdFirstName, tdLastName, tdEmail, tdPhone, tdAge, tdImage)
+    trUser.append(tdId, tdFirstName, tdLastName, tdEmail, tdPhone, tdAge, tdGender, tdImage)
 
     return trUser
 
