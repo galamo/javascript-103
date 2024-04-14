@@ -108,11 +108,11 @@ var singleMovie = { movieName: "armagedon", rating: 5 };
 
 - complete the Book card by adding all the rest of paramters into the card.
   example:
-        "country": "Nigeria",
-        "imageLink": "images/things-fall-apart.jpg",
-        "language": "English",
-        "link": "https://en.wikipedia.org/wiki/Things_Fall_Apart",
-        "pages": 209,
+  "country": "Nigeria",
+  "imageLink": "images/things-fall-apart.jpg",
+  "language": "English",
+  "link": "https://en.wikipedia.org/wiki/Things_Fall_Apart",
+  "pages": 209,
 
         "year": 1958
 
