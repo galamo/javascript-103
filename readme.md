@@ -146,3 +146,9 @@ Add to our existing users management the following features
 - Create a color picker.
 - when selecting a color - the color will be saved in the local storage and the background will be changed according the color
 - refresh will save the same color as background in the page.
+
+# Ex 2 - 14.4
+
+- support local storage in book store - lesson_8
+- add to LS, get from LS
+- remove from LS - add new button Clear ( delete all books ) localStorage.removeItem("books")

@@ -2,7 +2,7 @@ function init() {
   loadUserFromLS();
   loadBackground();
   const colorPicker = document.getElementById("selectedColor");
-  
+
   colorPicker.addEventListener("change", (event) => {
     document.body.style.background = event.target.value;
     localStorage.setItem("background", event.target.value);
