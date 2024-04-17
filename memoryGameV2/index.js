@@ -9,21 +9,14 @@ function ImageCard(_url, _id) {
 var images = [];
 function CreateImages() {
     var id = 1;
-    images.push(new ImageCard("http://cdn.playbuzz.com/cdn/78d179a7-6e4f-4f3f-8c40-b4e3a3127bbf/136fa33c-bce9-42c9-9b7b-637fc44d5a6a_560_420.jpg", id++))
-
+    images.push(new ImageCard("https://hips.hearstapps.com/digitalspyuk.cdnds.net/18/32/1533822689-nun-cp-001r.jpg?crop=1.00xw:0.340xh;0,0.0327xh&resize=1200:*", id++))
     images.push(new ImageCard("http://illusion.scene360.com/wp-content/uploads/2012/03/laurie_lipton_03.jpg", id++))
-
     images.push(new ImageCard("http://nitrogenius.net/wp-content/uploads/2015/09/thumbnail3.jpg", id++))
-
     images.push(new ImageCard("https://i.ytimg.com/vi/KoxgP_FQuWk/maxresdefault.jpg", id++))
-
-    images.push(new ImageCard("https://media.fromthegrapevine.com/assets/images/2017/9/scream-horror.jpg.482x490_q71_crop-smart.jpg", id++))
+    images.push(new ImageCard("https://media-prod.fangoria.com/images/nightmare_on_elm_street_2010.original.jpg", id++))
 }
-
 CreateImages();
-
 var board = document.getElementById("board");
-
 function createBoard() {
 
     while (images.length != 0) {
@@ -46,10 +39,10 @@ function generateCardMemory(theRandomImage) { //this will return image inide div
     var template = document.getElementById("clone");
     var divCard = template.cloneNode(true);
 
-    
+
     var img = document.createElement("IMG");
-    img.style.height = "300px";
-    img.style.width = "300px";
+    img.style.height = "480px";
+    img.style.width = "320px";
     img.src = theRandomImage.URL;
 
     divCard.getElementsByClassName("back")[0].appendChild(img)
