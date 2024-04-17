@@ -14,7 +14,7 @@ function stopSalesMessage() {
 
 function startCount() {
     intervalId = setInterval(() => {
-        
+
         count = count - 1;
         document.getElementById("count").innerText = count;
     }, 1000);

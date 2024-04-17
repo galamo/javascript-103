@@ -158,3 +158,7 @@ Add to our existing users management the following features
 - Copy the object to a new Job - `job2`
 - Change the copied object.
 - print both of them and see the differences 
+
+# Homework  - 17.4
+- setInterval - stop the counter on zero
+- support reset button - the counter will return to 10 and the startCount will restart the operation
