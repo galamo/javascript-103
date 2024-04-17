@@ -152,3 +152,11 @@ Add to our existing users management the following features
 - support local storage in book store - lesson_8
 - add to LS, get from LS
 - remove from LS - add new button Clear ( delete all books ) localStorage.removeItem("books")
+
+
+
+# Ex 1 - 17.4
+- Create an object that represent your job `job`
+- Copy the object to a new Job - `job2`
+- Change the copied object.
+- print both of them and see the differences 
