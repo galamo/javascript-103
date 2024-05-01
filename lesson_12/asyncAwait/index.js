@@ -14,7 +14,6 @@ function init() {
         try {
             document.querySelector("#spinner").style.display = "block"
             const result = await getDataFromApi(true)
-            console.log(result)
             document.querySelector("#content").innerHTML = imgString
             document.querySelector("#spinner").style.display = "none"
         } catch (error) {

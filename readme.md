@@ -168,3 +168,9 @@ Add to our existing users management the following features
 - Create the following functionality in your page
 - when the page loaded - wait 5 sec and load on the bottom an image ( some commercial for your selection)
 - for example https://images.squarespace-cdn.com/content/v1/57e49a19414fb5b5169a9161/1544026619092-FO2GKZ9FKFRWF4BF0GFD/image002-tempweb.jpg
+
+# Ex2 - 1.5
+- Create the same page like in fetchApi ex, with diff URL
+- url: https://randomuser.me/api/?results=300
+- clicking the button `get random users` will fetch from the url the relevant users and show the number of users
+- `the number of users is: 300`
