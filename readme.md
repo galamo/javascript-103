@@ -174,3 +174,15 @@ Add to our existing users management the following features
 - url: https://randomuser.me/api/?results=300
 - clicking the button `get random users` will fetch from the url the relevant users and show the number of users
 - `the number of users is: 300`
+
+# Homework 1.5 
+- use the following api - https://www.omdbapi.com/
+- first sign to the API using your Email and get an API key
+- DONT USE MY KEY! 
+- implement a search movie by title
+- s paramter in the query should be equal to the user input, user typed scream so the url will look like the following:
+- https://www.omdbapi.com/?apikey=PUT_HERE_YOUR_KEY&s=scream
+- s paramter in the query should be equal to the user input, user typed frozen so the url will look like the following:
+- https://www.omdbapi.com/?apikey=PUT_HERE_YOUR_KEY&s=frozen
+- use fetch api to retrieve the result from OMDB ( with async await )
+- draw the result as cards - each card = movie
