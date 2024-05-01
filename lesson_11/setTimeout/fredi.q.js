@@ -53,3 +53,7 @@ function getImageCard(cardId) {
 }
 
 init()
+
+console.log("a")
+console.log("b")
+console.log("c")
