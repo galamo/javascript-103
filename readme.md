@@ -162,3 +162,9 @@ Add to our existing users management the following features
 # Homework  - 17.4
 - setInterval - stop the counter on zero
 - support reset button - the counter will return to 10 and the startCount will restart the operation
+
+
+# Ex 1 - 1.5
+- Create the following functionality in your page
+- when the page loaded - wait 5 sec and load on the bottom an image ( some commercial for your selection)
+- for example https://images.squarespace-cdn.com/content/v1/57e49a19414fb5b5169a9161/1544026619092-FO2GKZ9FKFRWF4BF0GFD/image002-tempweb.jpg
