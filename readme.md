@@ -187,3 +187,5 @@ Add to our existing users management the following features
 - use fetch api to retrieve the result from OMDB ( with async await )
 - draw the result as cards - each card = movie
 
+# Ex1 - 8.5
+- implement the function `getCountriesApi`

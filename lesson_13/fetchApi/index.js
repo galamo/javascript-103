@@ -13,7 +13,6 @@ function initMovies() {
     loadMovies()
     // harel want to do something here? it will be blocked? 
     // the answer is: 
-
 }
 
 async function loadMovies() {
@@ -65,24 +64,8 @@ function getSingleMovie(movie) {
 
 async function initCountries() {
 
-    const moviesArray = await getMoviesApi()
-
-
-    // button.addEventListener("click", async () => {
-    //     try {
-
-    //         document.querySelector("#spinner").style.display = "block"
-    //         const result = await fetch("https://restcountries.com/v3.1/all")
-    //         // data returned from API 
-    //         const data = await result.json()
-    //         document.querySelector("#movies-content").innerText = `The number of countries is: ${data.length}`
-    //         document.querySelector("#spinner").style.display = "none"
-    //     } catch (error) {
-    //         console.log(error)
-    //         alert("Something went wrong")
-    //     }
-    // })
-
+    const countriesArray = await getCountriesApi()
+    console.log(countriesArray)
 }
 
 async function getMoviesApi(movieSearch = "scream") {
@@ -91,6 +74,10 @@ async function getMoviesApi(movieSearch = "scream") {
     })
     const data = await result.json()
     return data.Search;
+}
+
+async function getCountriesApi() {
+    // implement this function
 }
 
 
