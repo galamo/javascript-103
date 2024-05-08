@@ -12,7 +12,6 @@ function init() {
             const result = await fetch("https://restcountries.com/v3.1/all")
             // data returned from API 
             const data = await result.json()
-
             document.querySelector("#content").innerText = `The number of countries is: ${data.length}`
             document.querySelector("#spinner").style.display = "none"
         } catch (error) {

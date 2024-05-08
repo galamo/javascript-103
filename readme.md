@@ -186,3 +186,4 @@ Add to our existing users management the following features
 - https://www.omdbapi.com/?apikey=PUT_HERE_YOUR_KEY&s=frozen
 - use fetch api to retrieve the result from OMDB ( with async await )
 - draw the result as cards - each card = movie
+
