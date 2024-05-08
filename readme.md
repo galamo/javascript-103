@@ -197,3 +197,7 @@ Add to our existing users management the following features
 https://www.omdbapi.com/?apikey=ffa5acbc&i=<imdbID>&plot=full 
 4. take the result and print to console.log
 5. draw the plot inside the card 
+
+# Homework - 8.5 
+1. try to understand the pieChart code https://github.com/galamo/javascript-103/blob/piechart/lesson_13/fetchApi/index.js
+2. complete Ex2
