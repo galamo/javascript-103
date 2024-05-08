@@ -24,7 +24,37 @@ async function loadMovies(s) {
         loader.style.display = "block"
         const moviesArray = await getMoviesApi(s)
         draw(moviesArray)
-
+        const result = moviesArray.reduce((acc, currentMovie) => {
+            if (acc[currentMovie.Type]) {
+                acc[currentMovie.Type] = acc[currentMovie.Type] + 1
+            } else {
+                acc[currentMovie.Type] = 1
+            }
+            return acc;
+        }, {})
+        const barColors = [
+            "#b91d47",
+            "#00aba9",
+            "#2b5797",
+            "#e8c3b9",
+            "#1e7145"
+        ];
+        new Chart("myChart", {
+            type: "pie",
+            data: {
+                labels: Object.keys(result),
+                datasets: [{
+                    backgroundColor: barColors,
+                    data: Object.values(result)
+                }]
+            },
+            options: {
+                title: {
+                    display: true,
+                    text: "Types"
+                }
+            }
+        });
     } catch (ex) {
         alert("Harel - application")
     } finally {
@@ -86,6 +116,7 @@ async function getCountriesApi() {
     const data = await result.json()
     return data;
 }
+
 
 
 
