@@ -189,3 +189,11 @@ Add to our existing users management the following features
 
 # Ex1 - 8.5
 - implement the function `getCountriesApi`
+
+# Ex2 - 8.5 
+1. refactor imdbID on each card to button
+2. add event listener to the imdbID button
+3. when clicking the button - execute fetch api ( http request ) with the foolowing url: 
+https://www.omdbapi.com/?apikey=ffa5acbc&i=<imdbID>&plot=full 
+4. take the result and print to console.log
+5. draw the plot inside the card 
