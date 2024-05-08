@@ -2,24 +2,27 @@
 // HTTP requests
 // Return a Promise
 const API_URL = `https://www.omdbapi.com/?apikey=ffa5acbc&s=`
+const API_URL_COUNTRIES = `https://restcountries.com/v3.1/all`
+
 const loader = document.querySelector("#spinner")
 const refreshMoviesButton = document.querySelector("#refreshMovies")
-
+const searchButton = document.querySelector("#search-button")
+const searchInput = document.querySelector("#search-input")
 
 function initMovies() {
+    searchButton.addEventListener("click", () => {
+        loadMovies(searchInput.value)
+    })
     refreshMoviesButton.addEventListener("click", () => {
         loadMovies()
     })
     loadMovies()
-    // harel want to do something here? it will be blocked? 
-    // the answer is: 
 }
-
-async function loadMovies() {
+async function loadMovies(s) {
     try {
         clearData()
         loader.style.display = "block"
-        const moviesArray = await getMoviesApi()
+        const moviesArray = await getMoviesApi(s)
         draw(moviesArray)
 
     } catch (ex) {
@@ -28,7 +31,6 @@ async function loadMovies() {
         loader.style.display = "none"
     }
 }
-
 function clearData() {
     document.querySelector("#movies-content").innerHTML = "";
 
@@ -40,7 +42,6 @@ function draw(Movies) {
     const moviesCards = Movies.map(movie => getSingleMovie(movie))
     moviesContainer.append(...moviesCards)
 }
-
 function getSingleMovie(movie) {
     if (typeof movie !== 'object') return;
     const singleMovieDiv = document.createElement("div")
@@ -61,25 +62,30 @@ function getSingleMovie(movie) {
     singleMovieDiv.append(title, year, imdbID, type, poster)
     return singleMovieDiv
 }
-
 async function initCountries() {
 
-    const countriesArray = await getCountriesApi()
-    console.log(countriesArray)
-}
+    try {
+        const countriesArray = await getCountriesApi()
+        document.querySelector("#countries-length").innerText = `the number of countries is: ${countriesArray.length}`
+    } catch (error) {
 
+    }
+
+}
 async function getMoviesApi(movieSearch = "scream") {
     const result = await fetch(API_URL + movieSearch, {
-        method: "GET"
+        method: "GET",
     })
     const data = await result.json()
     return data.Search;
 }
-
 async function getCountriesApi() {
-    // implement this function
+    const result = await fetch(API_URL_COUNTRIES, {
+        method: "GET",
+    })
+    const data = await result.json()
+    return data;
 }
-
 
 
 

@@ -12,14 +12,16 @@
 
 <body>
     <div style="display: flex; justify-content: center;">
-        <div>
+        <div style="width: 50%;">
+            <h1>Countries</h1>
+            <h2 id="countries-length"></h2>
             <h1>Movies</h1>
-            <button id="refreshMovies" class="btn-btn-info"> <img
-                    src="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-refresh-512.png" width="20"
-                    alt=""></button>
+            <button id="refreshMovies" class="btn btn-info">Refresh</button>
         </div>
     </div>
-
+    <div style="display: flex; justify-content: center;">
+        <input id="search-input" type="text"> <button id="search-button" class="btn btn-primary">Search</button>
+    </div>
     <div style="display: flex; justify-content: center;">
         <div id="spinner" class="spinner-border text-info" style="display: none;" role="status">
             <span class="visually-hidden">Loading...</span>
