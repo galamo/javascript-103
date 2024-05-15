@@ -24,6 +24,7 @@ async function loadMovies(s) {
         clearData()
         loader.style.display = "block"
         const moviesArray = await getMoviesApi(s)
+        console.log(moviesArray)
         draw(moviesArray)
         const result = moviesArray.reduce((acc, currentMovie) => {
             if (acc[currentMovie.Type]) {
@@ -33,6 +34,8 @@ async function loadMovies(s) {
             }
             return acc;
         }, {})
+        console.log(result)
+
         const barColors = [
             "red",
             "yellow",
@@ -57,6 +60,7 @@ async function loadMovies(s) {
                 }
             }
         });
+
     } catch (ex) {
         alert("Harel - application")
     } finally {
@@ -141,3 +145,10 @@ initCountries()
 
 
 
+
+const countries = [{ name: "israel", p: 8 }, { name: "usa", p: 150 }, { name: "russia", p: 200 }, { name: "china", p: 500 }]
+
+countries.reduce((totalPopulation, currentCountry) => {
+    totalPopulation = totalPopulation + currentCountry.p
+    return totalPopulation
+}, 0) 

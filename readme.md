@@ -216,5 +216,11 @@ https://www.omdbapi.com/?apikey=ffa5acbc&plot=full&i=<movie.imdbid>
 - name, colors, players, play(), tableLocation, year, signedFansNumber, stadium
 
 
+# Homework
+1. Create another pie chart with year aggregation
+for example:
+`{ 1998: 2, 2000: 3 , 2004: 3}`
+
+
 
 
