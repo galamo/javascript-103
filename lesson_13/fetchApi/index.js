@@ -2,6 +2,7 @@
 // HTTP requests
 // Return a Promise
 const API_URL = `https://www.omdbapi.com/?apikey=ffa5acbc&s=`
+const API_URL_ID = `https://www.omdbapi.com/?apikey=ffa5acbc&plot=full&i=`
 const API_URL_COUNTRIES = `https://restcountries.com/v3.1/all`
 
 const loader = document.querySelector("#spinner")
@@ -80,9 +81,15 @@ function getSingleMovie(movie) {
     singleMovieDiv.classList.add("singleMovieDiv")
     const title = document.createElement("h3")
     const year = document.createElement("h5")
-    const imdbID = document.createElement("h5")
+    const imdbID = document.createElement("button")
+    imdbID.classList.add("btn", "btn-success")
     const type = document.createElement("h5")
     const poster = document.createElement("img")
+
+    imdbID.addEventListener("click", async () => {
+        const result = await getImdbIdPlotApi(movie.imdbID)
+        console.log(result)
+    })
 
     title.innerText = movie.Title
     year.innerText = "Year: " + movie.Year
@@ -116,6 +123,14 @@ async function getCountriesApi() {
     })
     const data = await result.json()
     return data;
+}
+
+async function getImdbIdPlotApi(id) {
+    const result = await fetch(API_URL_ID + id, {
+        method: "GET",
+    })
+    const data = await result.json()
+    return data.Plot;
 }
 
 
