@@ -13,5 +13,7 @@ function DrivingLicence(_name, _lastName, _idNumber, _lc) {
     this.expirationDate = new Date(new Date().getTime() + 999999000000).toISOString()
 }
 
+DrivingLicence.prototype.sayHi = function(){}
+
 const DLAmir2 = new DrivingLicence("Amir", "Mizrahi", 2451351, ["B", "A2"])
 console.log(DLAmir2)
