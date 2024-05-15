@@ -209,3 +209,12 @@ https://www.omdbapi.com/?apikey=ffa5acbc&plot=full&i=<movie.imdbid>
 `const m = new Movie(....)`
 
 
+# Ex 2 - 15.5 
+- Create a class - FootbalTeam
+- `class FootballTeam {....}`
+- `new FootballTeam(....)`
+- name, colors, players, play(), tableLocation, year, signedFansNumber, stadium
+
+
+
+
