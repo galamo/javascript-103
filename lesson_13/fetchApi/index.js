@@ -25,7 +25,38 @@ async function loadMovies(s) {
         loader.style.display = "block"
         const moviesArray = await getMoviesApi(s)
         draw(moviesArray)
-
+        const result = moviesArray.reduce((acc, currentMovie) => {
+            if (acc[currentMovie.Type]) {
+                acc[currentMovie.Type] = acc[currentMovie.Type] + 1
+            } else {
+                acc[currentMovie.Type] = 1
+            }
+            return acc;
+        }, {})
+        const barColors = [
+            "red",
+            "yellow",
+            "blue",
+            "green",
+            "pink",
+            "purple"
+        ];
+        new Chart("moviesPieChart", {
+            type: "pie",
+            data: {
+                labels: Object.keys(result),
+                datasets: [{
+                    backgroundColor: barColors,
+                    data: Object.values(result)
+                }]
+            },
+            options: {
+                title: {
+                    display: true,
+                    text: "Movies distribution"
+                }
+            }
+        });
     } catch (ex) {
         alert("Harel - application")
     } finally {
@@ -101,6 +132,7 @@ async function getImdbIdPlotApi(id) {
     const data = await result.json()
     return data.Plot;
 }
+
 
 
 
