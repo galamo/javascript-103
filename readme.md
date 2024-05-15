@@ -197,3 +197,9 @@ Add to our existing users management the following features
 https://www.omdbapi.com/?apikey=ffa5acbc&plot=full&i=<movie.imdbid> 
 4. take the result and print to console.log
 5. draw the plot inside the card 
+
+
+# Ex 1 - 15.5 
+- Create a Movie Function constructor based on the IMDB lesson
+`function Movie(.....){......}`
+`const m = new Movie(....)`

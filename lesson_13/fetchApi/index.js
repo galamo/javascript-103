@@ -33,13 +33,14 @@ async function loadMovies(s) {
             return acc;
         }, {})
         const barColors = [
-            "#b91d47",
-            "#00aba9",
-            "#2b5797",
-            "#e8c3b9",
-            "#1e7145"
+            "red",
+            "yellow",
+            "blue",
+            "green",
+            "pink",
+            "purple"
         ];
-        new Chart("myChart", {
+        new Chart("moviesPieChart", {
             type: "pie",
             data: {
                 labels: Object.keys(result),
@@ -51,7 +52,7 @@ async function loadMovies(s) {
             options: {
                 title: {
                     display: true,
-                    text: "Types"
+                    text: "Movies distribution"
                 }
             }
         });
