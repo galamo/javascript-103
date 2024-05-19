@@ -226,3 +226,11 @@ for example:
 - Use Our code & change the Create/Post to Update/PUT, try to update a POST 
 - Add another UI elements for this exercise 
 
+
+
+
+# Homework - 19.5
+- according the following API: https://jsonplaceholder.typicode.com/
+explore + use the following entries
+PATCH	/posts/1 - explain me next lesson why do we need it ( Especialy Michal Sivan)
+DELETE	/posts/1
