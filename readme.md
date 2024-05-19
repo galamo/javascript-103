@@ -226,6 +226,9 @@ for example:
 - Use Our code & change the Create/Post to Update/PUT, try to update a POST 
 - Add another UI elements for this exercise 
 
+# Ex2 - 19.5
+- Based on countries API
+- Try to aggregate currencyPopularity { USD: 30 , ILS: 1 , EUR: 50 , JBP: 2}
 
 
 
@@ -234,3 +237,4 @@ for example:
 explore + use the following entries
 PATCH	/posts/1 - explain me next lesson why do we need it ( Especialy Michal Sivan)
 DELETE	/posts/1
+
