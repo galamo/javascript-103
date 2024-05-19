@@ -20,3 +20,5 @@ function init() {
 
 init()
 
+// We want the following result
+// {  "Europe": 152451224, "Asia": 46565468 ..... }
