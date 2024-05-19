@@ -19,6 +19,7 @@ function initMovies() {
     })
     loadMovies()
 }
+let chartElement = null
 async function loadMovies(s) {
     try {
         clearData()
@@ -44,7 +45,10 @@ async function loadMovies(s) {
             "pink",
             "purple"
         ];
-        new Chart("moviesPieChart", {
+        if (chartElement) {
+            chartElement.destroy()
+        }
+        chartElement = new Chart("moviesPieChart", {
             type: "pie",
             data: {
                 labels: Object.keys(result),

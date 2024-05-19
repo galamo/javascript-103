@@ -221,6 +221,8 @@ https://www.omdbapi.com/?apikey=ffa5acbc&plot=full&i=<movie.imdbid>
 for example:
 `{ 1998: 2, 2000: 3 , 2004: 3}`
 
-
-
+# Ex1 - 19.5
+- Use the following API: https://jsonplaceholder.typicode.com/guide/
+- Use Our code & change the Create/Post to Update/PUT, try to update a POST 
+- Add another UI elements for this exercise 
 
