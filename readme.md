@@ -228,7 +228,7 @@ for example:
 
 # Ex2 - 19.5
 - Based on countries API
-- Try to aggregate currencyPopularity { USD: 30 , ILS: 1 , EUR: 50 , JBP: 2}
+- Try to aggregate currencyPopularity { USD: 30 , ILS: 1 , EUR: 50 , GBP: 2}
 
 
 
