@@ -7,6 +7,31 @@ function init() {
             // data returned from API 
             const data = await result.json()
 
+            const currencyAggregation = data.reduce((currencyAgg, current) => {
+                if (!current?.currencies) return currencyAgg
+                currencies = Object.keys(current?.currencies)
+                console.log(currencies)
+                if (!Array.isArray(currencies)) return currencyAgg
+                currencies.forEach(currencyKey => {
+                    if (currencyAgg[currencyKey]) {
+                        currencyAgg[currencyKey] = currencyAgg[currencyKey] + 1
+                    } else {
+                        currencyAgg[currencyKey] = 1;
+                    }
+                });
+                return currencyAgg
+            }, {})
+
+            console.log(currencyAggregation)
+            // this is the Object.entries result: 
+            //[[key, value],[key, value],[key, value],[key, value],[key, value],[key, value]]
+            const over5Countries = Object.entries(currencyAggregation).filter(([key, value]) => {
+                return value > 5
+            })
+
+
+
+
             const populationByRegion = data.reduce((regionPopulation, current) => {
                 if (regionPopulation[current.region]) {
                     regionPopulation[current.region] = regionPopulation[current.region] + Number(current.population)
@@ -51,6 +76,28 @@ function init() {
                     }
                 },
             });
+
+            new Chart("currencyPieChart", {
+                type: "pie",
+                data: {
+                    labels: Object.keys(currencyAggregation),
+                    datasets: [{
+                        label: "currencies",
+                        data: Object.values(currencyAggregation),
+                        backgroundColor: barColors,
+                    }
+
+                    ]
+                },
+                options: {
+                    scales: {
+                        y: {
+                            beginAtZero: false
+                        }
+                    }
+                },
+            });
+
 
         } catch (error) {
             console.log(error)

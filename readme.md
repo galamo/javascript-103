@@ -238,3 +238,7 @@ explore + use the following entries
 PATCH	/posts/1 - explain me next lesson why do we need it ( Especialy Michal Sivan)
 DELETE	/posts/1
 
+- Based on countries API
+- Try to aggregate countries by languages { english: 30 , hebrew: 1}
+- present the top 10 in piechart
+
