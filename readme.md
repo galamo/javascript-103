@@ -259,3 +259,13 @@ DELETE	/posts/1
 2. try to sign to a free api layer: https://apilayer.com/?utm_source=google&utm_medium=cpc&utm_campaign=apilayer_search_mena&gad_source=1&gclid=EAIaIQobChMItteahO-hhgMVeJFoCR3sXQ4REAAYASAAEgLZe_D_BwE
 - choose an API and search for GET request that present a data, fetch the data from API and draw it on the UI.
 - feel free to add any kind of functionalities you want.
+
+# Material
+- Async operations in JS
+- https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Asynchronous/Introducing
+- https://www.youtube.com/watch?v=vn3tm0quoqE
+- https://www.youtube.com/watch?v=9j1dZwFEJ-c
+- https://www.youtube.com/watch?v=_9vgd9XKlDQ
+- Reduce function in JS
+- https://www.youtube.com/watch?v=s1XVfm5mIuU
+- https://www.youtube.com/watch?v=g1C40tDP0Bk
