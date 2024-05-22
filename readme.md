@@ -242,3 +242,11 @@ DELETE	/posts/1
 - Try to aggregate countries by languages { english: 30 , hebrew: 1}
 - present the top 10 in piechart
 
+
+# Ex - 1 22.5
+- create new project
+- load jquery + jquery ui libraries
+- create a sortable plan list for your vacation 
+- input: vacation description , image: link to the image of te relevant place you want to visit, date
+- button - create task, will append new list item to the list
+- the list should be sortable according your priority

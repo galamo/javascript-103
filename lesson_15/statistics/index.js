@@ -3,10 +3,11 @@ function init() {
     button.addEventListener("click", async () => {
         try {
 
-            const result = await fetch("https://restcountries.com/v3.1/all")
-            // data returned from API 
-            const data = await result.json()
-
+            // const result = await fetch("https://restcountries.com/v3.1/all")
+            // // data returned from API 
+            // const data = await result.json()
+            const data = countries;
+            console.log(data)
             const currencyAggregation = data.reduce((currencyAgg, current) => {
                 if (!current?.currencies) return currencyAgg
                 currencies = Object.keys(current?.currencies)
@@ -28,7 +29,6 @@ function init() {
             const over5Countries = Object.entries(currencyAggregation).filter(([key, value]) => {
                 return value > 5
             })
-
 
 
 
