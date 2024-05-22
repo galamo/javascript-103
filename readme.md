@@ -247,6 +247,15 @@ DELETE	/posts/1
 - create new project
 - load jquery + jquery ui libraries
 - create a sortable plan list for your vacation 
-- input: vacation description , image: link to the image of te relevant place you want to visit, date
+- input: task description , image: link to the image of te relevant place you want to visit
 - button - create task, will append new list item to the list
 - the list should be sortable according your priority
+
+# Homework
+1. watch the following: 
+- https://www.youtube.com/watch?v=QhQ4m5g2fhA
+- https://www.youtube.com/watch?v=2n5EBLBHx-A
+
+2. try to sign to a free api layer: https://apilayer.com/?utm_source=google&utm_medium=cpc&utm_campaign=apilayer_search_mena&gad_source=1&gclid=EAIaIQobChMItteahO-hhgMVeJFoCR3sXQ4REAAYASAAEgLZe_D_BwE
+- choose an API and search for GET request that present a data, fetch the data from API and draw it on the UI.
+- feel free to add any kind of functionalities you want.
