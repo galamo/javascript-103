@@ -101,11 +101,34 @@ const users = [
     { userName: 'Morton_Lockman', password: 'gAWChKtyU31yzar' }
 ]
 
+const usersObj = users.reduce((obj, currentUser) => {
+    obj[`${currentUser.userName}:${currentUser.password}`] = currentUser
+    return obj
+}, {})
+console.log(users)
+console.log(usersObj)
 
-function loginUser(username, password) {
-    // is user exist + authenticate, it means: username === arr[index].userName && password === arr[index].password 
-    // O(n)
-    // ?
+function loginUserOn(username, password) {
+    const userToFind = users.find(u => u.password === password && u.userName === username)
+    if (userToFind) {
+        console.log("user authenticated")
+    } else {
+        console.log("***user unauthorized***")
+    }
+    return userToFind
+}
+
+console.log(loginUserOn("Pauline_Jakubowski", "rB45XiSXob0vWMu"))
+console.log(loginUserO1("Pauline_Jakubowski", "rB45XiSXob0vWMu"))
+
+function loginUserO1(username, password) {
+    const user = usersObj[`${username}:${password}`]
+    if (user) {
+        console.log("user authenticated")
+    } else {
+        console.log("***user unauthorized***")
+    }
+    return user
 }
 
 // you need to implement the loginUser
