@@ -269,3 +269,7 @@ DELETE	/posts/1
 - Reduce function in JS
 - https://www.youtube.com/watch?v=s1XVfm5mIuU
 - https://www.youtube.com/watch?v=g1C40tDP0Bk
+
+
+# Homework
+-  ex1 page 61 - [מצגת סיבוכיות](https://t2k-pap-prod-assets.s3.eu-west-1.amazonaws.com/public/e6397bca-cda9-4986-86d9-992a34885a9c/b36c071d-e6a2-4901-8393-b390467170c1/t2k-uncompressed/T_2_Q_6045053071_27906___%D7%9E%D7%A6%D7%92%D7%AA_%D7%A1%D7%99%D7%91%D7%95%D7%9B%D7%99%D7%95%D7%AA_28_06.pdf)
