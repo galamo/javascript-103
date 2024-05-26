@@ -5,24 +5,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.3/themes/base/jquery-ui.css">
-
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css"
+        integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous" />
 </head>
 
 <body>
-    <h1 id="header"> Create Vacation Tasks </h1>
-    <input type="text" id="task">
-    <input type="text" id="image">
-    <button id="addTaskAction"> Add Task </button>
+    <div style="width: 80%; margin:auto">
+        <h1 id="header"> Jokes </h1>
+        <div id="loader" class="loader" role="status">
+        </div>
 
-    <div>
-        
-        <ul id="vacationsTaskList" class="sortableVacationsTaskList">
-           
-        </ul>
+        <div id="jokesList">
+
+        </div>
+
     </div>
-
-
     <script src="https://code.jquery.com/jquery-3.7.1.js"
         integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/ui/1.14.0-beta.1/jquery-ui.js"
