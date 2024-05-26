@@ -39,3 +39,6 @@ async function getJokeById(id) {
     const data = await result.json();
     return data;
 }
+
+
+
