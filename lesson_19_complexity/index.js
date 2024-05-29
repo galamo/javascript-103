@@ -30,7 +30,7 @@ function dequeue2() { // remove from queue
     const aniBator = queue2[first] // O(1)
     delete queue2[first] // O(1)
     first++ // O(1)
-    if (Object.keys(queue2).length === 0) { // O(n)
+    if (first === last) { // O(n)
         resetQueue()
     }
     return aniBator; // O(1)
