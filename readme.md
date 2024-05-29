@@ -291,7 +291,7 @@ DELETE	/posts/1
 
 - how to implement queue in JS, with enqueue/dequeue of O(1)\\
 
-# Ex2 - 29.5
+# Ex2 + homework - 29.5
 - Authentication system
 - each user that makes a login should receive a session ( session can be a random number - huge one OR generated timestamp with random number) 
 ```js
