@@ -299,6 +299,6 @@ const session = new Date().getTime() + "_" +  Math.ceil(Math.random() * 9999)
 ```
 - When a user wants to do an action we need to check with O(1) if he authorized to do it
 - implement 2 functions
-1. `login(username, password)` - already done
+1. `login(username, password)` - already done ( return session in case the login succeeded)
 2. `doSomething(session)` - check if the session exist & active ( not older than 1 min) - O(1)
 
