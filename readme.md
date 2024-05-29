@@ -302,3 +302,5 @@ const session = new Date().getTime() + "_" +  Math.ceil(Math.random() * 9999)
 1. `login(username, password)` - already done ( return session in case the login succeeded)
 2. `doSomething(session)` - check if the session exist & active ( not older than 1 min) - O(1)
 
+- How can i validate the user with expiration of 1 min? 
+- When should we delete the session from the `sessionsObj`  ? 
