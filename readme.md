@@ -282,3 +282,11 @@ DELETE	/posts/1
 # Complexity
 - https://www.youtube.com/watch?v=itn09C2ZB9Y&pp=ygUYamF2YXNjaXBydCBjb21wbGV4aXR5IE9u
 - https://www.youtube.com/watch?v=KXAbAa1mieU
+
+
+# Ex1 - 29.5
+- queue implementation in JS:
+1. enqueue - O(1)
+2. dequeue - O(n)
+
+- how to implement queue in JS, with enqueue/dequeue of O(1)
