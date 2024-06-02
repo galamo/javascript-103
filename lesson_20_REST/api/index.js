@@ -1,13 +1,21 @@
 const express = require("express")
+const cors = require("cors")
+const bodyParser = require("body-parser")
 
 const app = express()
-
+app.use(cors())
+app.use(bodyParser.json())
 // get all products 
 // http://localhost:4500/products
 app.get("/products", function (req, res, next) {
     return res.json({ products: products.products })
 })
-
+app.post("/products", function (req, res, next) {
+    const product = req.body;
+    const generatedId = Math.ceil(Math.random() * 9999999)
+    products.products.push({ ...product, id: generatedId })
+    return res.send(`Product created : ${generatedId}`)
+})
 app.get("/products/:id", function (req, res, next) {
     const product = products.products.find((c) => c.id === +req.params.id)
     if (product) {
@@ -16,13 +24,29 @@ app.get("/products/:id", function (req, res, next) {
         return res.status(404).send("product not found")
     }
 })
-
 app.delete("/products/:id", function (req, res, next) {
-    // +req.params.id => id from request ( user / client )
-    // find the element
-    // delete the element from the array => splice
-    // return message => "deleted successfully"
+    const id = +req.params.id;
+    const productIndex = products.products.findIndex((c) => c.id === id);
+    if (productIndex > -1) {
+        products.products.splice(productIndex, 1)
+        return res.send("deleted successfully" + id)
+    } else {
+        return res.send("error in delete")
+    }
 })
+app.put("/products/:id", function (req, res, next) {
+    const newProduct = req.body;
+    let exitingProductIndex = products.products.findIndex((c) => c.id === +req.params.id)
+    if (exitingProductIndex > -1) {
+        products.products[exitingProductIndex] = { ...products.products[exitingProductIndex], ...newProduct }
+        return res.send("product updated")
+    } else {
+        return res.send("Product not found...")
+    }
+})
+
+
+
 
 
 app.listen(4500)
