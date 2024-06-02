@@ -1,13 +1,12 @@
 // fetch Api
 // HTTP requests
 // Return a Promise
-
+const xhr = new XMLHttpRequest(); // beautifull for Harel
 let counter = 0;
 function init() {
     const button = document.querySelector("#getCountries")
     button.addEventListener("click", async () => {
         try {
-
             document.querySelector("#spinner").style.display = "block"
             const result = await fetch("https://restcountries.com/v3.1/all")
             // data returned from API 
@@ -26,4 +25,5 @@ function init() {
 }
 
 init()
+
 
