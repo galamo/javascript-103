@@ -45,9 +45,39 @@ app.put("/products/:id", function (req, res, next) {
     }
 })
 
+app.get("/add/:n1/:n2", function (req, res, next) {
+    res.setHeader("X-Powered-By", "EliyahuJS")
+    console.log(Number(req.params.n1) + Number(req.params.n2))
+    const result = Number(req.params.n1) + Number(req.params.n2)
+    return res.send(result.toString());
+})
+app.get("/sub/:n1/:n2", function (req, res, next) {
+    const result = Number(req.params.n1) - Number(req.params.n2)
+    return res.send(result.toString());
+})
+app.get("/mul/:n1/:n2", function (req, res, next) {
+    const result = Number(req.params.n1) * Number(req.params.n2)
+    return res.send(result.toString());
+})
+app.get("/div/:n1/:n2", function (req, res, next) {
+    const result = Number(req.params.n1) / Number(req.params.n2)
+    return res.send(result.toString());
+})
+
+// app.get("/:operation/:n1/:n2", function () {
+//     if (operation === "add")
+//         if (operation === "sub")
+//             if (operation === "mul")
+//                 if (operation === "div")
+// })
 
 
+// function mulNum(n1, n2)
+// function divNum(n1, n2)
+// function addNum(n1, n2)
+// function subNum(n1, n2)
 
+// function calc(operation, n1, n2)
 
 app.listen(4500)
 
